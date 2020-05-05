@@ -10,6 +10,15 @@ public class Dish {
 
     private short id;
 
+    public Dish(double price, String name, String description, short id) {
+        this.price = price;
+        this.name = name;
+        this.description = description;
+        this.id = id;
+    }
+    
+    
+
     public double getPrice() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
