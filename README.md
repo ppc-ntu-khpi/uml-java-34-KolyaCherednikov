@@ -18,7 +18,7 @@
 
 ----
 
-<img src="https://github.com/ppc-ntu-khpi/UML-Starter/blob/master/other/MyUML.png" width="100%"/>
+<img src="https://github.com/ppc-ntu-khpi/uml-java-34-KolyaCherednikov/blob/master/other/MyUML.png" width="100%"/>
 
 ## Выбрано задание
 5. система керування закладом громадського харчування (страви, замовлення, клієнти, працівники тощо)
