@@ -16,10 +16,20 @@ public class Dish {
         this.description = description;
         this.id = id;
     }
-    
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public short getId() {
+        return id;
+    }
 
     public double getPrice() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return price;
     }
 }
