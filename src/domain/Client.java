@@ -4,10 +4,11 @@ public class Client {
 
     private Order[] orders;
 
+    private short id;
+
     private String name;
-    
-    public Client(String n){
-        this.name = n;
+
+    public Client(String n, short id) {
     }
 
     public Order createOrder(Order order) {

@@ -6,6 +6,11 @@ public class Order {
 
     private Client Orderer;
 
+    private short id;
+
+    public Order(short id, Client Orderer) {
+    }
+
     public Dish addDish(Dish dish) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

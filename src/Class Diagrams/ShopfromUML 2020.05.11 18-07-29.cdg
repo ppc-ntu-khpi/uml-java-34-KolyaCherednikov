@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ShopfromUML">
+  <ClassDiagramComponents>
+    <Class name="Client" package="domain" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="orders" type="Order[]" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createOrder" returnType="Order" visibility="public">
+          <Argument type="Order" name="order"/>
+        </Method>
+        <Method name="remoteOrder" returnType="Order" visibility="public">
+          <Argument type="Order" name="order"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Dish" package="domain" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="description" type="String" visibility="private"/>
+        <Field name="id" type="short" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="price"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="description"/>
+          <Argument type="short" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="getId" returnType="short" visibility="public"/>
+        <Method name="getPrice" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Order" package="domain" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="dishes" type="Dish[][]" visibility="private"/>
+        <Field name="Orderer" type="Client" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addDish" returnType="Dish" visibility="public">
+          <Argument type="Dish" name="dish"/>
+        </Method>
+        <Method name="remoteDish" returnType="Dish" visibility="public">
+          <Argument type="Dish" name="dish"/>
+        </Method>
+        <Method name="getOrderPrice" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Worker" package="domain" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="completedorders" type="Order[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addcompleteorder" returnType="void" visibility="public">
+          <Argument type="Order" name="order"/>
+        </Method>
+        <Method name="cancelOrder" returnType="void" visibility="public">
+          <Argument type="Order" name="order"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="domain.Order" target="domain.Dish" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Orderer" source="domain.Order" target="domain.Client" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="domain.Client" target="domain.Order" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="domain.Worker" target="domain.Order" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

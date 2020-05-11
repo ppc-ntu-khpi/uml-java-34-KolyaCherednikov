@@ -5,9 +5,10 @@ public class Worker {
     private String name;
 
     private Order[] completedorders;
-    
-    public Worker(String n){
-        this.name = n;
+
+    private short id;
+
+    public Worker(String n, short id) {
     }
 
     public void addcompleteorder(Order order) {
